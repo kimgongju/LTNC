@@ -195,7 +195,7 @@ void bank::transfer(){
     return;
   }
   list_user[check[current_id] - 1].money -= money;
-  list_user[check[other_id]].money += money;
+  list_user[check[other_id] - 1].money += money;
   save_history(current_id, "Transfer", -money);
   save_history(other_id, "Receive", money);
 }
